@@ -13,14 +13,6 @@ class centeralLayout(Widget):
         menu = BoxLayout(cols = 3,size = (500,30), size_hint=(None,None))
         masterPageLayout.add_widget(menu)
         
-        '''
-        
-    
-        
-        
-        
-        '''
-        
         page = GridLayout()
         masterPageLayout.add_widget(page)
         
@@ -32,10 +24,28 @@ class centeralLayout(Widget):
         menu.add_widget(menu2_3)
         menu.add_widget(menu3_3)
         
-        fileButton = Button(text = "file",padding=(0,0,0,0))
-        editButton = Button(text = "edit",padding=(0,0,0,0))
-        helpButton = Button(text = "help",padding=(0,0,0,0))
-    
+        fileButton = Button(text = "file")
+        editButton = Button(text = "edit")
+        helpButton = Button(text = "help")
+        
+        '''
+            10/22/2015 6:50 PM
+                Test buttons, not sure of function response yet   
+                        
+        '''
+        fileButton2 = Button(text='Value %d' % 1, size_hint_y=None, height=44)
+        fileButton3 = Button(text='Value %d' % 2, size_hint_y=None, height=44)
+        
+        fileDropDown = DropDown()
+        fileDropDown.add_widget(fileButton2)
+        fileDropDown.add_widget(fileButton3)
+
+        fileButton.bind(on_release=fileDropDown.open)
+        
+        #fileButton2.bind(on_release=lambda fileButton2: fileDropDown.select(fileButton2.text))
+        #fileButton3.bind(on_release=lambda fileButton3: fileDropDown.select(fileButton3.text))
+        
+        
         menu1_3.add_widget(fileButton)
         menu1_3.add_widget(editButton)
         menu1_3.add_widget(helpButton)

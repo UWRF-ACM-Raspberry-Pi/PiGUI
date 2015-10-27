@@ -16,13 +16,14 @@ class centeralLayout(Widget):
         page = GridLayout()
         masterPageLayout.add_widget(page)
         
-        menu1_3 = BoxLayout(cols = 5, rows = 1)
-        menu2_3 = BoxLayout() #blank 2/3 of menu
-        menu3_3 = BoxLayout() #blank 3/3 of menu
+        menuLeft = BoxLayout(cols = 5, rows = 1)
+        menu.add_widget(menuLeft)
         
-        menu.add_widget(menu1_3)
-        menu.add_widget(menu2_3)
-        menu.add_widget(menu3_3)
+        menuMiddle = BoxLayout()
+        menu.add_widget(menuMiddle)
+         
+        menuRight = BoxLayout() 
+        menu.add_widget(menuRight)
         
         fileButton = Button(text = "file")
         editButton = Button(text = "edit")
@@ -46,9 +47,9 @@ class centeralLayout(Widget):
         #fileButton3.bind(on_release=lambda fileButton3: fileDropDown.select(fileButton3.text))
         
         
-        menu1_3.add_widget(fileButton)
-        menu1_3.add_widget(editButton)
-        menu1_3.add_widget(helpButton)
+        menuLeft.add_widget(fileButton)
+        menuLeft.add_widget(editButton)
+        menuLeft.add_widget(helpButton)
         
 
         '''

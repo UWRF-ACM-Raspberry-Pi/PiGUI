@@ -1,0 +1,32 @@
+#: import FadeTransition kivy.uix.screenmanager.FadeTransition
+
+dashboard:
+	BoxLayout:
+		orientation:"vertical"
+		rows:2
+		
+		
+		BoxLayout:
+			cols:3
+			size:100,30
+			size_hint:0,0
+			
+			
+			BoxLayout:
+				cols:5
+				rows:1
+				
+				Button:
+					text:"file"
+				Button:
+					text:"edit"
+				Button:
+					text:"help"
+		
+	
+		GridLayout:
+			size:500,300
+			size_hint:0.5,0.5
+			Button:
+				text:"hello"
+			
